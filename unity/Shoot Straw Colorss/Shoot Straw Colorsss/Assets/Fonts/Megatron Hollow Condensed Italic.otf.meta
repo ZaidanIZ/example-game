@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 88801dcf36c12a84bad95e92d9031510
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Megatron Hollow Condensed
+  fontNames:
+  - Megatron Hollow Condensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 12f9a9c25fe044a4fbb65a20afcd3c38, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

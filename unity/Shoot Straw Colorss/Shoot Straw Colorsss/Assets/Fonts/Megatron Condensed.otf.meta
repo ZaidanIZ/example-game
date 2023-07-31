@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d17196f0fc6b7ec4dae15b65c12949ee
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Megatron Condensed
+  fontNames:
+  - Megatron Condensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7df7df14bebf1e24a8823b7bd482171c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
