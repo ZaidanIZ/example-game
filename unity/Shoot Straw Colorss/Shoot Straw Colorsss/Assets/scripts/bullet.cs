@@ -29,6 +29,7 @@ public class bullet : MonoBehaviour {
         if (col.gameObject.tag == "keys")
         {
             Score.ScoreValue += 1;
+            //TotalScore.totalValue += 1;
             col.gameObject.GetComponent<MeshCollider>().enabled = false;
             Instantiate(keysParticles, new Vector3(transform.position.x,transform.position.y,transform.position.z), Quaternion.identity);
             col.gameObject.GetComponent<MeshRenderer>().material = GetComponent<MeshRenderer>().material;

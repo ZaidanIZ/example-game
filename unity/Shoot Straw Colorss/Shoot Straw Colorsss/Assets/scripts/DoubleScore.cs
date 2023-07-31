@@ -11,6 +11,7 @@ public class DoubleScore : MonoBehaviour
         Advertisement.Show("rewardedVideo");
         //score double ad\/
         Score.ScoreValue *= 2;
+        //TotalScore.totalValue += Score.ScoreValue * 2;
         Debug.Log("p");
         
     }
