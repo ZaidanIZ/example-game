@@ -143,6 +143,7 @@ public class UnityAdsController : MonoBehaviour
             Debug.Log("Video selesai - tawarkan coin ke pemain");
 
             //COIN BERTAMBAH ATAU LIFE TAMBAH ATAU YANG LAIN TARUH DISINI
+            Score.ScoreValue *= 2;
         }
         else if (result == ShowResult.Skipped)
         {

@@ -25,7 +25,7 @@ public class move : MonoBehaviour {
     // Use this for initialization
 	void Start () {
         Score.ScoreValue = 0;
-        //TotalScore.totalValue += Score.ScoreValue; 
+        //TotalScore.totalValue -= 216; 
         colours();
         if (!PlayerPrefs.HasKey("mute"))
             PlayerPrefs.SetInt("mute", 0);

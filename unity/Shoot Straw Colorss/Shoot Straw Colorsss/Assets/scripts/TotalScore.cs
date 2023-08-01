@@ -7,12 +7,13 @@ public class TotalScore : MonoBehaviour
 {
     Text TotalScoreZ;
     public static int totalValue;
+    //public float totalValue;
 
     // Start is called before the first frame update
     void Start()
     {
         TotalScoreZ = GetComponent<Text>();
-        totalValue += Score.ScoreValue;
+        //totalValue += Score.ScoreValue;
         
     }
 
