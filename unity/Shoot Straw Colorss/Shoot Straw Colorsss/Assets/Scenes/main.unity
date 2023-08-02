@@ -214,7 +214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &288986830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,14 +224,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 288986829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b1fb2c8a71641c43afa5943b0495b35, type: 3}
+  m_Script: {fileID: 11500000, guid: c8ec4de390d72c3419ccbe537568ecda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _androidGameId: 5354753
-  _iOSGameId: 5354752
+  _androidGameId: 5360060
+  _iOSGameId: 5360061
   _testMode: 1
-  interstitialz: {fileID: 0}
   reardedAdsButton: {fileID: 0}
+  intersitialAdsButton: {fileID: 0}
 --- !u!4 &288986831
 Transform:
   m_ObjectHideFlags: 0
@@ -1614,6 +1614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1461359831}
+  - component: {fileID: 1461359833}
   - component: {fileID: 1461359830}
   - component: {fileID: 1461359832}
   m_Layer: 0
@@ -1630,24 +1631,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461359829}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba48485e236933c4b9defd33380f68d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextSceneToload: 
-  timetoload: 0
-  AllCommonUrl: 
-  IsPortrait: 0
-  IsMenuLoaded: 0
-  IconLoaded: 0
-  UnityGameID: 33675
-  bannerAdId: ca-app-pub-4860036010026505/9185133762
-  interstitialAdId: ca-app-pub-4860036010026505/6395318894
-  rewardVideoAdId: ca-app-pub-4860036010026505/8829910544
-  isDebug: 0
-  isOnTop: 0
-  adscount: 0
 --- !u!4 &1461359831
 Transform:
   m_ObjectHideFlags: 0
@@ -1674,9 +1662,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14517e0010f98547ba245236d6f7af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bannerPosition: 4
-  _androidAdUnitId: Banner_Android
-  _iOSAdUnitId: Banner_iOS
+--- !u!114 &1461359833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461359829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d865faf215d0c41b7dd64a6fdd1940, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1523202944
 GameObject:
   m_ObjectHideFlags: 0

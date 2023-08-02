@@ -189,7 +189,7 @@ public class move : MonoBehaviour {
     {
         levelSelect.call = false;
         PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
-        AdManager.instance.showInterstitial();
+        //AdManager.instance.showInterstitial();
         winPanel.SetActive(true);
         Invoke("colours", 0.5f);
      }
