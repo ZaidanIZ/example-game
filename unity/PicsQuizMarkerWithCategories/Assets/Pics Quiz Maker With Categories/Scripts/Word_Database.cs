@@ -54,6 +54,7 @@ public class Word_Database : MonoBehaviour
 
 	//CONFIGS
 	public int coinsWinedByWord = 5;
+	public int coinReward = 10;
 	public int coinsToShowOneLetter = 2;
 	public int coinsToSolveWord = 8;
 	public int startWithCoins = 20;

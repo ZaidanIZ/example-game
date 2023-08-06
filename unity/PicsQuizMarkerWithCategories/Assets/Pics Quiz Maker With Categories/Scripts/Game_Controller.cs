@@ -349,7 +349,7 @@ public class Game_Controller : MonoBehaviour
 						// 	interstitial.ShowAd();
 						// 	Debug.Log("ad Showed");
                         // }
-						interstitial.ShowAd();
+						//interstitial.ShowAd();
 
 
 					}
