@@ -701,6 +701,7 @@ public class Game_Controller : MonoBehaviour
 
                         GameObject instantiateCongratulations = Instantiate(congratulations.gameObject, new Vector3(congratulations.transform.position.x, congratulations.transform.position.y, congratulations.transform.position.z), congratulations.transform.rotation) as GameObject;
                         instantiateCongratulations.transform.Find("TextCoins").GetComponent<TextMesh>().text = "+" + wordDB.coinsWinedByWord;
+
 						//Advertisement.Show("video");
 						//yield return new WaitForSeconds (2f);
 						interstitial.ShowAd();

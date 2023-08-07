@@ -62,7 +62,10 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
-            //Find("TextCoins").GetComponent<TextMesh>().text = "+" + wdb.coinReward;
+            //adslesai.transform.Find("TextCoins").GetComponent<TextMesh>().text = "+" + wdb.coinReward;
+
+            //PlayerPrefs.SetInt("coinsPlayer", PlayerPrefs.GetInt("coinsPlayer") + wdb.coinReward);
+
             Debug.Log("Coin bertambah");
         }
     }
