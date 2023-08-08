@@ -22,7 +22,20 @@ public class Interstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }
- 
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            LoadAd();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ShowAd();
+        }
+    }
+
     // Show the loaded content in the Ad Unit:
     public void ShowAd()
     {

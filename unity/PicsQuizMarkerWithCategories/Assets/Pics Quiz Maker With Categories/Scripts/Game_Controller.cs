@@ -53,9 +53,10 @@ public class Game_Controller : MonoBehaviour
 
     GameObject cameraObj;
 	[SerializeField] Interstitial interstitial;
+    private int coinReward;
 
-	//CONVERT SPRITE TO TEXTURE FUNCTION
-	Texture2D textureFromSprite(Sprite sprite)
+    //CONVERT SPRITE TO TEXTURE FUNCTION
+    Texture2D textureFromSprite(Sprite sprite)
 	{
 		if(sprite == null) 
 		{
@@ -92,6 +93,7 @@ public class Game_Controller : MonoBehaviour
         }
 
     }
+
     public void StartLevel()
     {
 
@@ -257,6 +259,13 @@ public class Game_Controller : MonoBehaviour
 		ClicDetections ();
 
 		ShowCoinsLogs();
+
+		if (Input.GetKeyDown(KeyCode.L))
+		{
+		  int c = 	PlayerPrefs.GetInt ("coinsPlayer", 0);
+			PlayerPrefs.SetInt ("coinsPlayer", c+1);
+			Debug.Log("tombol di pencet");
+		}
 
 	}
 

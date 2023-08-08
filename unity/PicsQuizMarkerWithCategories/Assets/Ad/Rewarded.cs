@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityEngine.Advertisements;
 
@@ -9,7 +10,9 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
     string _adUnitId = null; // This will remain null for unsupported platforms
     Word_Database wdb;
-    public GameObject adslesai;
+    //public GameObject adslesai;
+
+    public UnityEvent afterAd;
 
     void Awake()
     {
@@ -22,6 +25,19 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
 
         // Disable the button until the ad is ready to show:
         _showAdButton.interactable = false;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            LoadAd();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ShowAd();
+        }
     }
 
     // Call this public method when you want to get an ad ready to show.
@@ -65,6 +81,12 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
             //adslesai.transform.Find("TextCoins").GetComponent<TextMesh>().text = "+" + wdb.coinReward;
 
             //PlayerPrefs.SetInt("coinsPlayer", PlayerPrefs.GetInt("coinsPlayer") + wdb.coinReward);
+            //afterAd?.Invoke();
+            //GameObject.Find("TextCoin").GetComponent<TextMesh>().text = "+" + wdb.coinReward;
+
+
+            int c = PlayerPrefs.GetInt("coinsPlayer", 0);
+            PlayerPrefs.SetInt("coinsPlayer", c + 10);
 
             Debug.Log("Coin bertambah");
         }
