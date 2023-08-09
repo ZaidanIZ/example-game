@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.JoyLeapStudio.ColotTapPopPaimtimg3D
+    Android: com.JoyLeapStudio.ColorTapPopPainting3D
     Standalone: com.dd.ColorPop3d
   buildNumber:
     Standalone: 0
@@ -809,7 +809,7 @@ PlayerSettings:
   cloudProjectId: a1e5d2a4-d740-4ccb-8e2b-c081812ff357
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Colot Tap & Pop Paimtimg 3D
+  projectName: Colot Tap & Pop Painting 3D
   organizationId: joy-leap-studio-1
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 1

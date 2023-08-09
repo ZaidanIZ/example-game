@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class move : MonoBehaviour {
+    
     public ShSfx thisSfx;
     Rigidbody rb;
     public GameObject[] obstacles,obs;
@@ -189,7 +190,7 @@ public class move : MonoBehaviour {
     {
         levelSelect.call = false;
         PlayerPrefs.SetInt("level", PlayerPrefs.GetInt("level") + 1);
-        //AdManager.instance.showInterstitial();
+        //AdInitializer.adinits.OnInitializationComplete();
         winPanel.SetActive(true);
         Invoke("colours", 0.5f);
      }

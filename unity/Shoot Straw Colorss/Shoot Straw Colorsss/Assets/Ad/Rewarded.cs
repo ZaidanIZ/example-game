@@ -62,7 +62,7 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
             // Grant a reward.
             Score.ScoreValue += 1;
             Debug.Log("coin Bertambah");
-            Debug.Log("you get 10 coin");
+            //Debug.Log("you get 10 coin");
         }
     }
 

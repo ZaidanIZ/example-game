@@ -1,19 +1,39 @@
 using UnityEngine;
 using System;
 using UnityEngine.Advertisements;
+using UnityEngine.Events;
 
 public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
+    public UnityEvent EventAfterInitAds;
     [SerializeField] string _androidGameId;
     [SerializeField] string _iOSGameId;
     [SerializeField] bool _testMode = true;
     private string _gameId;
     Action cbInit;
 
-    [SerializeField] Rewarded reardedAdsButton;
+    [SerializeField] Rewarded rewardedAdsButton;
     [SerializeField] Interstitial intersitialAdsButton;
 
+    public static AdInitializer adinits;
+
     void Awake()
+    {
+        if(adinits == null)
+        {
+            adinits = this;
+        }
+        DontDestroyOnLoad(this);
+        if (adinits != this) 
+        {
+            Destroy(this.gameObject);
+        }
+
+       
+
+    }
+
+    private void Start()
     {
         InitializeAds();
     }
@@ -37,7 +57,7 @@ public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
-        //reardedAdsButton.LoadAd();
+        EventAfterInitAds?.Invoke();
         //intersitialAdsButton.LoadAd();
     }
 
