@@ -20,7 +20,7 @@ public class MunculAd : MonoBehaviour
 
     public static void inter()
     {
-        //Advertisement.Show("interstitial");
+        Advertisement.Show("interstitial");
         Debug.Log("muncul inter");
     }
 }

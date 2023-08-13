@@ -16,7 +16,7 @@ public class DoubleScore : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
     public string interstitialPlacementId;
     public Text TotalScoreText;
 
-    public GameObject panel2;
+    //public GameObject panel2;
     DoubleScore dbsc;
 
     [SerializeField] Button _showAdButton;

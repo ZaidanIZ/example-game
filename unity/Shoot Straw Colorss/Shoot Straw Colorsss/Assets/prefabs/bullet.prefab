@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 114322795983262018}
   - component: {fileID: 135706135139188910}
   - component: {fileID: 54890673978440050}
+  - component: {fileID: -1796955491324937379}
   m_Layer: 0
   m_Name: bullet
   m_TagString: bullet
@@ -57,6 +58,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -68,6 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -80,6 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &114322795983262018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +102,7 @@ MonoBehaviour:
   keysParticles: {fileID: 1977624831345516, guid: de819f01174d9a049b3a676e30a7f82a,
     type: 3}
   failPanel: {fileID: 1936112203406774, guid: 7107fa3e3519ba54589289dc4385527c, type: 3}
+  randomize: {fileID: -1796955491324937379}
 --- !u!135 &135706135139188910
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -126,3 +132,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 2
   m_CollisionDetection: 2
+--- !u!114 &-1796955491324937379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145638243521884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c596bc7c8c08b774b9051fd0c755e264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
