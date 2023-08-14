@@ -8,6 +8,7 @@ public class Randomize : MonoBehaviour
 {
     Interstitial inters;
     private int randomNumber;
+    public static Randomize randomizee;
 
     public void Randomz()
     {
@@ -29,8 +30,10 @@ public class Randomize : MonoBehaviour
 
     public void Adrand()
     {
-
-        inters.ShowAd();
+        //AdInitializer.adinits.OnInitializationComplete();
+        Interstitial.inter.ShowAd();
+        //AdInitializer.adinits.InitializeAds();
+        //inters.ShowAd();
         //Advertisement.Show("intertitial");
         Debug.Log("adrand");
     }

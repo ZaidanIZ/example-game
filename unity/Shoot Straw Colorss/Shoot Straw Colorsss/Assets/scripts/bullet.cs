@@ -13,7 +13,7 @@ public class bullet : MonoBehaviour {
     public GameObject failParticles, keysParticles, failPanel;
     Vector3 dScale;
     public Randomize randomize;
-    Interstitial interstitial;
+    [SerializeField] Interstitial interstitial;
 
 
     // Use this for initialization
@@ -26,6 +26,11 @@ public class bullet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            interstitial.ShowAd();
+        }
 
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, max);
 	}
@@ -52,30 +57,17 @@ public class bullet : MonoBehaviour {
             Instantiate(failPanel);
             movement.GetComponent<move>().enabled = false;
             Destroy(gameObject);
+            interstitial.Update();
+            
 
-            //random number
             randomize.Randomz();
-            //randomm();
+            
             
 
 
         }
     }
 
-    //private void randomm()
-    //{
-    //    int[] numbers = { 1, 2 };
-    //    int randomIndex = Random.Range(0, numbers.Length);
-    //    int randomNumber = numbers[randomIndex];
-
-    //    Debug.Log(randomNumber);
-
-    //    if (randomNumber == 1)
-    //    {
-    //        //randomize.adrand();
-    //        Debug.Log("ad Muncul");
-    //        //Advertisement.Show("interstitial");
-    //    }
-    //}
+    
     
 }

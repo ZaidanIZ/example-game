@@ -7,12 +7,34 @@ public class Interstitial : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowL
     [SerializeField] string _iOsAdUnitId = "Interstitial_iOS";
     string _adUnitId;
 
+    public static Interstitial inter;
+
     void Awake()
     {
         // Get the Ad Unit ID for the current platform:
         _adUnitId = (Application.platform == RuntimePlatform.IPhonePlayer)
             ? _iOsAdUnitId
             : _androidAdUnitId;
+
+        if (inter == null)
+        {
+            inter = this;
+        }
+        DontDestroyOnLoad(this);
+        if (inter != this)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ShowAd();
+        }
+
+        
     }
 
     // Load content to the Ad Unit:

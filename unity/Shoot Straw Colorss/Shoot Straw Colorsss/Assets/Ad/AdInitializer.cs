@@ -12,10 +12,11 @@ public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
     private string _gameId;
     Action cbInit;
 
-    [SerializeField] Rewarded rewardedAdsButton;
-    [SerializeField] Interstitial intersitialAdsButton;
+    //[SerializeField] Rewarded rewardedAdsButton;
+    //[SerializeField] Interstitial intersitialAdsButton;
 
     public static AdInitializer adinits;
+
 
     void Awake()
     {
@@ -58,7 +59,8 @@ public class AdInitializer : MonoBehaviour, IUnityAdsInitializationListener
     {
         Debug.Log("Unity Ads initialization complete.");
         EventAfterInitAds?.Invoke();
-        //intersitialAdsButton.LoadAd();
+        ///intersitialAdsButton.LoadAd();
+        //Interstitial.inter.LoadAd();
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
