@@ -11,6 +11,7 @@ public class AdInit : MonoBehaviour, IUnityAdsInitializationListener
     void Awake()
     {
         InitializeAds();
+        Debug.Log("awake");
     }
 
     public void InitializeAds()
@@ -25,17 +26,21 @@ public class AdInit : MonoBehaviour, IUnityAdsInitializationListener
         if (!Advertisement.isInitialized && Advertisement.isSupported)
         {
             Advertisement.Initialize(_gameId, _testMode, this);
+            
         }
+        Debug.Log("init");
     }
 
 
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
+        Debug.Log("complete");
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
     {
         Debug.Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
+        Debug.Log("fail");
     }
 }

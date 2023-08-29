@@ -7,6 +7,8 @@ public class Inters : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
     [SerializeField] string _iOsAdUnitId = "Interstitial_iOS";
     string _adUnitId;
 
+    public static Inters inter;
+
     void Awake()
     {
         // Get the Ad Unit ID for the current platform:

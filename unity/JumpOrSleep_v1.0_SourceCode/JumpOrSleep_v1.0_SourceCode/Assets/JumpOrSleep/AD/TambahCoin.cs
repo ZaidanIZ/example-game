@@ -1,9 +1,24 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Advertisements;
+using UnityEngine.UI;
 
-public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
+
+
+public class TambahCoin : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
+    public string gameId;
+    private bool testMode = true;
+    public string bannerPlacementId;
+    public string rewardPlacementId;
+    public string interstitialPlacementId;
+    //public Text coin;
+
+    //public GameObject panel2;
+    TambahCoin tb;
+
     [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
@@ -20,16 +35,29 @@ public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
 
         // Disable the button until the ad is ready to show:
         _showAdButton.interactable = false;
-        Debug.Log("pe");
+
+
     }
 
-    //private void Start()
-    //{
-    //    Debug.Log("pe");
-    //    LoadAd();
-    //}
+    private void Start()
+    {
+        
+        Debug.Log("OI");
+        LoadAd();
+    }
 
-    // Call this public method when you want to get an ad ready to show.
+
+    public void DoubleTheScore()
+    {
+
+        
+
+
+        Debug.Log("Double Scored!");
+
+
+    }
+
     public void LoadAd()
     {
         // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
@@ -51,17 +79,6 @@ public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
         }
     }
 
-    private void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            ShowAd();
-        }
-
-
-    }
-
     // Implement a method to execute when the user clicks the button:
     public void ShowAd()
     {
@@ -77,6 +94,7 @@ public class Reward : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
+            DoubleTheScore();
             // Grant a reward.
         }
     }

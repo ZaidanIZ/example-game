@@ -61,6 +61,7 @@ public class GameManager : MonoBehaviour
 
 	public static event _UpdatePoint OnUpdatePoint;
 
+	public Randomize randomize;
 	void Awake ()
 	{
 		firstJump = true;
@@ -267,7 +268,8 @@ public class GameManager : MonoBehaviour
 	/// </summary>
 	public void GameOver ()
 	{
-		Debug.Log("mati");
+		
+		
 		int showRandom = Random.Range (0, 2);
 		//if (showRandom == 1)
 		//	AdsControl.Instance.showAds ();
@@ -276,6 +278,16 @@ public class GameManager : MonoBehaviour
 		if (OnGameOver != null)
 			OnGameOver ();
 	}
+
+	//void mati()
+ //   {
+	//	Debug.Log("mati");
+	//	//Inters.inter.ShowAd();
+	//	//Randomize.randomizee.Randomz();
+	//	randomize.Randomz();
+	//}
+
+
 	/// <summary>
 	///update UI when bird get coin
 	/// </summary>

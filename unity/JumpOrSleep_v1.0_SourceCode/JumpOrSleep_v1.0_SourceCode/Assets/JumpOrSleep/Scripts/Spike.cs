@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Spike : MonoBehaviour {
 
+	
+
 	// Use this for initialization
 	void Start () {
 	
@@ -18,6 +20,7 @@ public class Spike : MonoBehaviour {
 		if (col.gameObject.tag == "Bird") {
 
 			col.gameObject.GetComponent<Bird> ().Die ();
+			
 			//col.gameObject.transform.parent = null;
 		}
 	}
