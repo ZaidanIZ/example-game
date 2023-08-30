@@ -9,12 +9,14 @@ using UnityEngine.UI;
 
 public class TambahCoin : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
+    private GameManager gameManager;
     public string gameId;
     private bool testMode = true;
     public string bannerPlacementId;
     public string rewardPlacementId;
     public string interstitialPlacementId;
     //public Text coin;
+    public Text coinText;
 
     //public GameObject panel2;
     TambahCoin tb;
@@ -50,9 +52,23 @@ public class TambahCoin : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     public void DoubleTheScore()
     {
 
+
+
+        //coinText.text += 1;
+        int coinLast = PlayerPrefs.GetInt("Coin");
         
+        PlayerPrefs.SetInt("Coin",coinLast+25);
+        coinText.text = ""+ PlayerPrefs.GetInt("Coin");
 
 
+        //PlayerPrefs.SetInt("Coin", coinLast + PlayerPrefs.GetInt("Coin", 0));
+        //PlayerPrefs.GetInt("Coin", coinLast);
+
+        //PlayerPrefs.Save();
+
+
+
+        //gameManager.UpdateCoin();
         Debug.Log("Double Scored!");
 
 

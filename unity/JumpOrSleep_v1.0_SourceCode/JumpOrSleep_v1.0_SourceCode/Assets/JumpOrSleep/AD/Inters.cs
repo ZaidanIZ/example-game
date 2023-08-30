@@ -17,6 +17,19 @@ public class Inters : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
             : _androidAdUnitId;
     }
 
+    private void Start()
+    {
+        LoadAd();
+    }
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ShowAd();
+        }
+    }
+
     // Load content to the Ad Unit:
     public void LoadAd()
     {

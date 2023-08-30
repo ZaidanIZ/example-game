@@ -83,6 +83,9 @@ public class Bird : MonoBehaviour
 	/// </summary>
 	private bool trigger;
 
+	public Randomize rand;
+	[SerializeField] Inters interss;
+
 	// Use this for initialization
 	void Start ()
 	{
@@ -296,6 +299,7 @@ public class Bird : MonoBehaviour
 	/// </summary>
 	public void Die ()
 	{
+		Debug.Log("mati");
 		birdAnimator.SetBool ("Died", true);
 		AudioManager.Instance.PlaySound ("die");
 		currentGravity = 0;
@@ -303,6 +307,10 @@ public class Bird : MonoBehaviour
 		isDie = true;
 		gameManager.Shake ();
 		gameManager.GameOver ();
+		rand.Randomz();
+		
+
+
 	}
 	/// <summary>
 	///the bird get coin

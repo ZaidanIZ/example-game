@@ -24,9 +24,16 @@ public class AudioManager : MonoBehaviour {
 
 	public void Awake()
 	{
-		
-		m_Instance = this;
-		DontDestroyOnLoad(this.gameObject);
+		if(Instance == null)
+        {
+			m_Instance = this;
+		}
+        else
+        {
+			Destroy(this.gameObject);
+        }
+		//m_Instance = this;
+		//DontDestroyOnLoad(this.gameObject);
 		SetSound ();
 	}
 	// Use this for initialization

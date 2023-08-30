@@ -21,6 +21,7 @@ public class Spike : MonoBehaviour {
 
 			col.gameObject.GetComponent<Bird> ().Die ();
 			
+			
 			//col.gameObject.transform.parent = null;
 		}
 	}
