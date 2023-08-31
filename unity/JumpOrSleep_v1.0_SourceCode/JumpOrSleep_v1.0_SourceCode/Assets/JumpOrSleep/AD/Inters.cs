@@ -19,7 +19,8 @@ public class Inters : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListene
 
     private void Start()
     {
-        LoadAd();
+        //LoadAd();
+        //ShowAd();
     }
 
     public void Update()

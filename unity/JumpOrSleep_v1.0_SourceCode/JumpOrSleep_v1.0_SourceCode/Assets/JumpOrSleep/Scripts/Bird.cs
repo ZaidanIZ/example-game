@@ -307,7 +307,7 @@ public class Bird : MonoBehaviour
 		isDie = true;
 		gameManager.Shake ();
 		gameManager.GameOver ();
-		rand.Randomz();
+		//rand.Randomz();
 		
 
 
