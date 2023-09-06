@@ -1,24 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Advertisements;
 using UnityEngine.UI;
+using UnityEngine.Advertisements;
 
-
-
-public class DoubleScore : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
+public class RewardedAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
-    public string gameId;
-    private bool testMode = true;
-    public string bannerPlacementId;
-    public string rewardPlacementId;
-    public string interstitialPlacementId;
-    public Text TotalScoreText;
-
-    //public GameObject panel2;
-    DoubleScore dbsc;
-
     [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
@@ -35,36 +20,9 @@ public class DoubleScore : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
 
         // Disable the button until the ad is ready to show:
         _showAdButton.interactable = false;
-
-        
     }
 
-    private void Start()
-    {
-        //TotalScoreText.text = "Total Scoreasiduaopsd :" + PlayerPrefs.GetInt("TotalScore", 0);
-        Debug.Log("OI");
-        LoadAd();
-    }
-
-    
-
-
-    public void DoubleTheScore()
-    {
-       
-        //Score.ScoreValue *= 2;
-        ////TotalScore.totalValue += 108;
-        //PlayerPrefs.SetInt("TotalScore", Score.ScoreValue + PlayerPrefs.GetInt("TotalScore",0));
-        //TotalScore.totalValue = PlayerPrefs.GetInt("TotalScore", 0);
-        //if(TotalScoreText!=null) TotalScoreText.text = "Total Score: "+ TotalScore.totalValue;
-
-
-
-        Debug.Log("Double Scored!");
-       
-
-    }
-
+    // Call this public method when you want to get an ad ready to show.
     public void LoadAd()
     {
         // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
@@ -101,7 +59,6 @@ public class DoubleScore : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLi
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
-            DoubleTheScore();
             // Grant a reward.
         }
     }

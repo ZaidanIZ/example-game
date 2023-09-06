@@ -22,6 +22,8 @@ namespace TrickshotArena
 
 		private Vector3 shootCollisionPoint;       //the exact position on ball where the shoot happened. used for the curved shot.
 
+		public Randomize randomise;
+
 		void Awake()
 		{
 			shootCollisionPoint = new Vector3(0, 0, 0);
@@ -164,7 +166,7 @@ namespace TrickshotArena
                     StartCoroutine(gameController.GetComponent<GlobalGameManager>().managePostGoal("Player"));
                     break;
 			}
-			Randomize.randomizee.Randomz();
+			//randomise.Randomz();
 		}
 
 

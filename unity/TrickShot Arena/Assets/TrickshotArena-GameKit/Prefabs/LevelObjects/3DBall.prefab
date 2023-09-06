@@ -83,6 +83,8 @@ MonoBehaviour:
   shadow: {fileID: 1996528760572698}
   ballHitPost: {fileID: 8300000, guid: 6fdab0d24aa30db48976e1d7c479dd19, type: 3}
   ballHit1Up: {fileID: 8300000, guid: a07d0556ed9a90c46a47df1f05fb7d04, type: 3}
+  randomise: {fileID: 1097849416465144524, guid: 2feafba5ddc62044f968dddc6dc7b55e,
+    type: 3}
 --- !u!82 &82693878565956344
 AudioSource:
   m_ObjectHideFlags: 0

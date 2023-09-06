@@ -12,7 +12,7 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
     //Word_Database wdb;
     //public GameObject adslesai;
 
-    public UnityEvent afterAd;
+    //public UnityEvent afterAd;
 
     void Awake()
     {
@@ -78,17 +78,9 @@ public class Rewarded : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListe
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
             // Grant a reward.
-            //adslesai.transform.Find("TextCoins").GetComponent<TextMesh>().text = "+" + wdb.coinReward;
+            
 
-            //PlayerPrefs.SetInt("coinsPlayer", PlayerPrefs.GetInt("coinsPlayer") + wdb.coinReward);
-            //afterAd?.Invoke();
-            //GameObject.Find("TextCoin").GetComponent<TextMesh>().text = "+" + wdb.coinReward;
-
-
-            int c = PlayerPrefs.GetInt("coinsPlayer", 0);
-            PlayerPrefs.SetInt("coinsPlayer", c + 10);
-
-            Debug.Log("Coin bertambah");
+            Debug.Log("get reward");
         }
     }
 

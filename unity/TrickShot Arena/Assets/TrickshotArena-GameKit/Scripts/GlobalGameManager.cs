@@ -154,7 +154,7 @@ namespace TrickshotArena
             {
                 if (Input.GetKeyDown(KeyCode.W))
                 {
-                   // StartCoroutine(managePostGoal("Player"));
+                   StartCoroutine(managePostGoal("Player"));
                     
                 }
 
@@ -256,6 +256,7 @@ namespace TrickshotArena
 
             //ads
             //Randomize.randomizee.Randomz();
+            randommmm.Randomz();
             
 
 
