@@ -12,7 +12,7 @@ namespace TrickshotArena
 		/// </summary>
 
 		public int rotationSpeed = 12;      //rotation speed after each shoot/hit
-		public GameObject trail;            //trail object
+		//public GameObject trail;            //trail object
 		public GameObject shadow;           //shadow object
 		internal bool isUntouched;          //flag to make the ball as fresh (has not been shooted yet)
 
@@ -22,7 +22,7 @@ namespace TrickshotArena
 
 		private Vector3 shootCollisionPoint;       //the exact position on ball where the shoot happened. used for the curved shot.
 
-		public Randomize randomise;
+		//public Randomize randomise;
 
 		void Awake()
 		{
@@ -62,11 +62,11 @@ namespace TrickshotArena
 				startingScale = transform.localScale;
 				targetScale = new Vector3(0.1f, 0.1f, 0.1f);
 
-				//hide trail
-				if (trail)
-					trail.GetComponent<TrailRenderer>().enabled = false;
-				if (GetComponent<TrailRenderer>())
-					GetComponent<TrailRenderer>().enabled = false;
+				////hide trail
+				//if (trail)
+				//	trail.GetComponent<TrailRenderer>().enabled = false;
+				//if (GetComponent<TrailRenderer>())
+				//	GetComponent<TrailRenderer>().enabled = false;
 			}
 
 			transform.localScale = startingScale;
@@ -167,6 +167,8 @@ namespace TrickshotArena
                     break;
 			}
 			//randomise.Randomz();
+			//Randomize.randomizee.Randomz();
+			
 		}
 
 

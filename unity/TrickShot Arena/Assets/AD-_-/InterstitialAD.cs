@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.UI;
 
 public class InterstitialAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     [SerializeField] string _androidAdUnitId = "Interstitial_Android";
     [SerializeField] string _iOsAdUnitId = "Interstitial_iOS";
+    [SerializeField] Button _showAdButton;
     string _adUnitId;
+    public static InterstitialAD interstitialAD;
 
     void Awake()
     {
@@ -29,6 +32,14 @@ public class InterstitialAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
         // Note that if the ad content wasn't previously loaded, this method will fail
         Debug.Log("Showing Ad: " + _adUnitId);
         Advertisement.Show(_adUnitId, this);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            ShowAd();
+        }
     }
 
     // Implement Load Listener and Show Listener interface methods: 

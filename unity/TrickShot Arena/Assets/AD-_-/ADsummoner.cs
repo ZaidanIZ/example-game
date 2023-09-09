@@ -50,14 +50,19 @@ public class ADsummoner : MonoBehaviour
         interstitialz.ShowAd();
     }
 
+    public void tesss()
+    {
+        Debug.Log("pe");
+    }
+
     public void ShowBanner()
     {
-        bannerz.ShowBannerAd();
+        //bannerz.ShowBannerAd();
     }
 
     public void HideBanner()
     {
-        bannerz.HideBannerAd();
+        //bannerz.HideBannerAd();
     }
 
 }

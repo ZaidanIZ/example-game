@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 114506319140391702}
   - component: {fileID: 82693878565956344}
   - component: {fileID: 96159559321335806}
+  - component: {fileID: 4725377993834860630}
   m_Layer: 0
   m_Name: 3DBall
   m_TagString: ball
@@ -79,12 +80,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 25
-  trail: {fileID: 0}
   shadow: {fileID: 1996528760572698}
   ballHitPost: {fileID: 8300000, guid: 6fdab0d24aa30db48976e1d7c479dd19, type: 3}
   ballHit1Up: {fileID: 8300000, guid: a07d0556ed9a90c46a47df1f05fb7d04, type: 3}
-  randomise: {fileID: 1097849416465144524, guid: 2feafba5ddc62044f968dddc6dc7b55e,
-    type: 3}
+  randomise: {fileID: 4725377993834860630}
 --- !u!82 &82693878565956344
 AudioSource:
   m_ObjectHideFlags: 0
@@ -92,10 +91,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975457108487340}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 2367904ae538b7a4f9abd6f92d07379c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -288,6 +287,19 @@ TrailRenderer:
   m_MinVertexDistance: 0.01
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &4725377993834860630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975457108487340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94781f7974cefd41b45102d88c752e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inters: {fileID: 4912577000887676214, guid: f43f64cef6aca8a4b8357c14e3fcf035, type: 3}
 --- !u!1 &1996528760572698
 GameObject:
   m_ObjectHideFlags: 0

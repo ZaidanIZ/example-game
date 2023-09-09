@@ -80,7 +80,7 @@ namespace TrickshotArena
         public Text gameEndBestRecord;
         public GameObject newRecordRay;
         private GameObject adManager;
-        public Randomize randommmm;
+        //public Randomize randommmm;
 
 
         void Awake()
@@ -256,7 +256,9 @@ namespace TrickshotArena
 
             //ads
             //Randomize.randomizee.Randomz();
-            randommmm.Randomz();
+            //randommmm.Randomz();
+            
+            
             
 
 
@@ -288,6 +290,7 @@ namespace TrickshotArena
                 t += Time.deltaTime * speed;
                 gp.transform.position = new Vector3(Mathf.SmoothStep(40, 0, t), 0, -2);
                 yield return 0;
+                
             }
             yield return new WaitForSeconds(0.95f);
             float t2 = 0;
@@ -314,6 +317,7 @@ namespace TrickshotArena
             //Cooldown
             print("...");
             yield return new WaitForSeconds(0.15f);
+            
 
             //increase level
             level++;

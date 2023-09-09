@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Advertisements;
+using UnityEngine.Events;
 
 public class ADinitializer : MonoBehaviour, IUnityAdsInitializationListener
 {
@@ -7,10 +8,22 @@ public class ADinitializer : MonoBehaviour, IUnityAdsInitializationListener
     [SerializeField] string _iOSGameId;
     [SerializeField] bool _testMode = true;
     private string _gameId;
+    public UnityEvent EventAfterInitAds;
+    public static ADinitializer adinitz;
 
     void Awake()
     {
         InitializeAds();
+
+        if (adinitz == null)
+        {
+            adinitz = this;
+        }
+        DontDestroyOnLoad(this);
+        if (adinitz != this)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void InitializeAds()
@@ -32,6 +45,7 @@ public class ADinitializer : MonoBehaviour, IUnityAdsInitializationListener
     public void OnInitializationComplete()
     {
         Debug.Log("Unity Ads initialization complete.");
+        EventAfterInitAds?.Invoke();
     }
 
     public void OnInitializationFailed(UnityAdsInitializationError error, string message)
