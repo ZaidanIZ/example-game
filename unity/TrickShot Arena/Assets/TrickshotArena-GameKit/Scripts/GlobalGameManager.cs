@@ -22,6 +22,7 @@ namespace TrickshotArena
         public GameObject ingameHUD;
 
         public static int level;
+        public static int score;
         public static bool initLevel;
         public static int playerHealth;
 
@@ -80,7 +81,10 @@ namespace TrickshotArena
         public Text gameEndBestRecord;
         public GameObject newRecordRay;
         private GameObject adManager;
-        //public Randomize randommmm;
+        public Randomize randomScript;
+
+        public InterstitialAD interstitialScript;
+        public RewardedAD rewardedScript;
 
 
         void Awake()
@@ -260,13 +264,16 @@ namespace TrickshotArena
             
             
             
+            
 
 
 
             //wait a few seconds to show the effects , and physics cooldown
             if (Random.value > 0.9f)
+            {
                 playSfx(goalSfx[Random.Range(0, goalSfx.Length)]);
-
+            }
+                
             //play goal sfx
             GetComponent<AudioSource>().PlayOneShot(goalHappenedSfx[Random.Range(0, goalHappenedSfx.Length)], 1);
 
@@ -303,6 +310,18 @@ namespace TrickshotArena
             Destroy(gp, 1.5f);
 
             //Cooldown
+            int a;
+            a = Random.Range(1, 4);
+            Debug.Log("random yg keluar " + a);
+            if (a == 1)
+            {
+                
+                interstitialScript.ShowAd();
+            }
+            
+
+            
+
             print("...");
             yield return new WaitForSeconds(0.1f);
 
@@ -394,6 +413,8 @@ namespace TrickshotArena
 
             if (level > bestRecord)
                 newRecordRay.SetActive(true);
+
+            
         }
 
 
@@ -478,13 +499,15 @@ namespace TrickshotArena
 
                         //show tryagain panel
                         StartCoroutine(RunTryAgainPanel());
-                        //randommmm.Randomz();
+                        
                     }
                     else
                     {
                         //game over
                         gameIsFinished = true;
                         StartCoroutine(manageGameFinishState());
+                        rewardedScript.LoadAd();
+                        Debug.Log("load ad game over");
                     }
                 }
 

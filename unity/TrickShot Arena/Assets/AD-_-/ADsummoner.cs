@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(InterstitialAD))]
+[RequireComponent(typeof(RewardedAD))]
+[RequireComponent(typeof(BannerAD))]
+[RequireComponent(typeof(ADinitializer))]
+
 public class ADsummoner : MonoBehaviour
 {
     public RewardedAD rewardz;

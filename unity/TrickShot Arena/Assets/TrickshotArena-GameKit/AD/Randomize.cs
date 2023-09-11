@@ -6,8 +6,8 @@ using UnityEngine.Advertisements;
 
 public class Randomize : MonoBehaviour
 {
-    public Interstitial inters;
-    private int randomNumber;
+    //public Interstitial inters;
+    
     public static Randomize randomizee;
 
     public void Randomz()
@@ -30,19 +30,11 @@ public class Randomize : MonoBehaviour
 
     public void Adrand()
     {
-        //AdInitializer.adinits.OnInitializationComplete();
-        //Inters.inter.ShowAd();
-        inters.ShowAd();
-        //AdInitializer.adinits.InitializeAds();
-        //inters.ShowAd();
-        //Advertisement.Show("intertitial");
+        InterstitialAD.interstitialAD.ShowAd();
+       
         Debug.Log("adrand");
     }
 
-    //public void ShowAdss()
-    //{
-    //    //inters.ShowAd();
-    //    Debug.Log("swad");
-    //}
+   
 
 }

@@ -32,6 +32,7 @@ namespace TrickshotArena
 
 		void Start()
 		{
+			
 			//bounce unit scale from 0 to 1
 			StartCoroutine(scaleAnimator(1));
 

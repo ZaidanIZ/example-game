@@ -6,7 +6,7 @@ public class InterstitialAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsSho
 {
     [SerializeField] string _androidAdUnitId = "Interstitial_Android";
     [SerializeField] string _iOsAdUnitId = "Interstitial_iOS";
-    [SerializeField] Button _showAdButton;
+    //[SerializeField] Button _showAdButton;
     string _adUnitId;
     public static InterstitialAD interstitialAD;
 
