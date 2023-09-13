@@ -85,6 +85,7 @@ namespace TrickshotArena
 
         public InterstitialAD interstitialScript;
         public RewardedAD rewardedScript;
+        public Counter counterScript;
 
 
         void Awake()
@@ -413,6 +414,7 @@ namespace TrickshotArena
 
             if (level > bestRecord)
                 newRecordRay.SetActive(true);
+            counterScript.StopCounting();
 
             
         }
