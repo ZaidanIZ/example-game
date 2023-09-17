@@ -5,24 +5,22 @@ using UnityEngine.UI;
 public class Counter : MonoBehaviour
 {
     public Text scoreText;
-    public Text highScoreText;
-    public Text totalScoreText;
+    public Text totalScoreText; // Ganti highScore menjadi totalScore
+    public Text scoreAkhirText;
     public Button startButton;
-    //public Button stopButton;
 
     private int score = 0;
-    private int highScore = 0;
-    private int totalScore = 0;
+    private int totalScore = 0; // Ganti highScore menjadi totalScore
+    private int scoreAkhir = 0;
     private bool isCounting = false;
 
     void Start()
     {
         startButton.onClick.AddListener(StartCounting);
-        //stopButton.onClick.AddListener(StopCounting);
-        highScore = PlayerPrefs.GetInt("HighScore", 0); // Load high score from PlayerPrefs
+        totalScore = PlayerPrefs.GetInt("TotalScore", 0); // Load high score from PlayerPrefs, ganti highScore menjadi totalScore
         UpdateScoreText();
-        UpdateHighScoreText();
-        UpdateTotalScoreText();
+        UpdateTotalScoreText(); // Ganti highScore menjadi totalScore
+        UpdateScoreAkhirText();
     }
 
     void StartCounting()
@@ -47,22 +45,22 @@ public class Counter : MonoBehaviour
     void IncrementScore()
     {
         score += 1;
-        totalScore += 1;
+        scoreAkhir += 1;
         UpdateScoreText();
-        UpdateTotalScoreText();
+        UpdateScoreAkhirText();
     }
 
     void SaveAndResetScore()
     {
-        highScore += score;
-        if (highScore > PlayerPrefs.GetInt("HighScore", 0)) // Check if new high score
+        totalScore += score; // Ganti highScore menjadi totalScore
+        if (totalScore > PlayerPrefs.GetInt("TotalScore", 0)) // Check if new high score, ganti highScore menjadi totalScore
         {
-            PlayerPrefs.SetInt("HighScore", highScore); // Save new high score to PlayerPrefs
+            PlayerPrefs.SetInt("TotalScore", totalScore); // Save new high score to PlayerPrefs, ganti highScore menjadi totalScore
             PlayerPrefs.Save(); // Don't forget to save changes!
         }
         score = 0;
         UpdateScoreText();
-        UpdateHighScoreText();
+        UpdateTotalScoreText(); // Ganti highScore menjadi totalScore
     }
 
     void UpdateScoreText()
@@ -70,13 +68,13 @@ public class Counter : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
-    void UpdateHighScoreText()
+    void UpdateTotalScoreText() // Ganti highScore menjadi totalScore
     {
-        highScoreText.text = highScore.ToString();
+        totalScoreText.text = totalScore.ToString(); // Ganti highScore menjadi totalScore
     }
 
-    void UpdateTotalScoreText()
+    void UpdateScoreAkhirText()
     {
-        totalScoreText.text = totalScore.ToString();
+        scoreAkhirText.text = scoreAkhir.ToString();
     }
 }

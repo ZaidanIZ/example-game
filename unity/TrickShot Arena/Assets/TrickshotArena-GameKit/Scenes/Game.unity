@@ -1825,7 +1825,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 375940394}
-  - component: {fileID: 375940397}
   - component: {fileID: 375940393}
   - component: {fileID: 375940396}
   - component: {fileID: 375940395}
@@ -1870,9 +1869,9 @@ MonoBehaviour:
   EventAfterInitAds:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ADsummoner, Assembly-CSharp
-        m_MethodName: LoadInterstitial
+      - m_Target: {fileID: 375940396}
+        m_TargetAssemblyTypeName: InterstitialAD, Assembly-CSharp
+        m_MethodName: LoadAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1882,9 +1881,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ADsummoner, Assembly-CSharp
-        m_MethodName: LoadReward
+      - m_Target: {fileID: 375940395}
+        m_TargetAssemblyTypeName: RewardedAD, Assembly-CSharp
+        m_MethodName: LoadAd
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1904,8 +1903,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 2018215921}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1921,6 +1919,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d9cf963ba1ecff4981d77e793680322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _showAdButton: {fileID: 1879164767}
+  _loadAd: {fileID: 689422587}
   _androidAdUnitId: Rewarded_Android
   _iOSAdUnitId: Rewarded_iOS
 --- !u!114 &375940396
@@ -1937,21 +1937,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidAdUnitId: Interstitial_Android
   _iOsAdUnitId: Interstitial_iOS
---- !u!114 &375940397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375940391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93f7991768570e5428f6d88c47c389a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rewardz: {fileID: 0}
-  interstitialz: {fileID: 0}
-  bannerz: {fileID: 0}
 --- !u!1 &410666264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3718,7 +3703,7 @@ GameObject:
   - component: {fileID: 775297084}
   - component: {fileID: 775297083}
   m_Layer: 5
-  m_Name: BestScoreLabel
+  m_Name: TotalScoreLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3757,7 +3742,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Best Score
+  m_Text: Total Score
 --- !u!222 &775297084
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7117,7 +7102,7 @@ GameObject:
   - component: {fileID: 1869180940}
   - component: {fileID: 1869180939}
   m_Layer: 5
-  m_Name: BestScoreUI
+  m_Name: TotalScoreUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7184,6 +7169,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869180937}
   m_CullTransparentMesh: 1
+--- !u!114 &1879164767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 785983094947718673, guid: 6e276a7002cdb5a47b6e595a83f8d5be,
+    type: 3}
+  m_PrefabInstance: {fileID: 785983094454546677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1903416550
 GameObject:
   m_ObjectHideFlags: 0
@@ -7274,8 +7271,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 2020924460}
-  highScoreText: {fileID: 1869180939}
-  totalScoreText: {fileID: 336420953}
+  totalScoreText: {fileID: 1869180939}
+  scoreAkhirText: {fileID: 336420953}
   startButton: {fileID: 711610400}
 --- !u!4 &1904305891
 Transform:
@@ -7655,9 +7652,8 @@ MonoBehaviour:
   gameEndRecord: {fileID: 275297742}
   gameEndBestRecord: {fileID: 298634134}
   newRecordRay: {fileID: 1841089155}
-  randomScript: {fileID: 2018215924}
-  interstitialScript: {fileID: 2018215920}
-  rewardedScript: {fileID: 2018215922}
+  interstitialScript: {fileID: 375940396}
+  rewardedScript: {fileID: 375940395}
   counterScript: {fileID: 1904305890}
 --- !u!4 &1990481577
 Transform:
@@ -7866,95 +7862,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017662183}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2018215919
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2018215921}
-  - component: {fileID: 2018215920}
-  - component: {fileID: 2018215922}
-  - component: {fileID: 2018215923}
-  - component: {fileID: 2018215924}
-  m_Layer: 0
-  m_Name: Summoner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2018215920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018215919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b6049d5bee829c44a03b92703821300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _androidAdUnitId: Interstitial_Android
-  _iOsAdUnitId: Interstitial_iOS
---- !u!4 &2018215921
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018215919}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 375940394}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2018215922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018215919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d9cf963ba1ecff4981d77e793680322, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _androidAdUnitId: Rewarded_Android
-  _iOSAdUnitId: Rewarded_iOS
---- !u!114 &2018215923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018215919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b84783d3ba17ee248a403cfad0ecd6a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _bannerPosition: 4
-  _androidAdUnitId: Banner_Android
-  _iOSAdUnitId: Banner_iOS
---- !u!114 &2018215924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018215919}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94781f7974cefd41b45102d88c752e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2020924457
 GameObject:
   m_ObjectHideFlags: 0

@@ -81,7 +81,7 @@ namespace TrickshotArena
         public Text gameEndBestRecord;
         public GameObject newRecordRay;
         private GameObject adManager;
-        public Randomize randomScript;
+        //public Randomize randomScript;
 
         public InterstitialAD interstitialScript;
         public RewardedAD rewardedScript;
@@ -414,6 +414,8 @@ namespace TrickshotArena
 
             if (level > bestRecord)
                 newRecordRay.SetActive(true);
+
+
             counterScript.StopCounting();
 
             
