@@ -1914,13 +1914,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 375940391}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d9cf963ba1ecff4981d77e793680322, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showAdButton: {fileID: 1879164767}
-  _loadAd: {fileID: 689422587}
   _androidAdUnitId: Rewarded_Android
   _iOSAdUnitId: Rewarded_iOS
 --- !u!114 &375940396
@@ -7655,6 +7654,7 @@ MonoBehaviour:
   interstitialScript: {fileID: 375940396}
   rewardedScript: {fileID: 375940395}
   counterScript: {fileID: 1904305890}
+  rewardedButton: {fileID: 1879164767}
 --- !u!4 &1990481577
 Transform:
   m_ObjectHideFlags: 0
@@ -7951,6 +7951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2043714479}
   - component: {fileID: 2043714480}
+  - component: {fileID: 2043714481}
   m_Layer: 5
   m_Name: GameoverPanel
   m_TagString: Untagged
@@ -8000,6 +8001,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2043714481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043714478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9cf963ba1ecff4981d77e793680322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _showAdButton: {fileID: 1879164767}
+  _androidAdUnitId: Rewarded_Android
+  _iOSAdUnitId: Rewarded_iOS
 --- !u!1 &2062359444
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,7 +8171,7 @@ PrefabInstance:
     - target: {fileID: 785983094947718673, guid: 6e276a7002cdb5a47b6e595a83f8d5be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 785983094947718673, guid: 6e276a7002cdb5a47b6e595a83f8d5be,
         type: 3}
@@ -8166,8 +8182,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3253906345736654059, guid: a9ff598fa8c5b8342a3a950ee3ba957b,
-        type: 3}
+      objectReference: {fileID: 2043714481}
     - target: {fileID: 785983094947718673, guid: 6e276a7002cdb5a47b6e595a83f8d5be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -8181,7 +8196,7 @@ PrefabInstance:
     - target: {fileID: 785983094947718673, guid: 6e276a7002cdb5a47b6e595a83f8d5be,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Rewarded, Assembly-CSharp
+      value: RewardedAD, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 785983094947718673, guid: 6e276a7002cdb5a47b6e595a83f8d5be,
         type: 3}

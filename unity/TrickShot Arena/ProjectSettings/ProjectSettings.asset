@@ -251,8 +251,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Desktop/Joy Leap Studio Key Store Android -
-    jls12345.keystore'
+  AndroidKeystoreName: '{dedicated}: Downloads/Joy Leap Studio Key Store Android
+    - jls12345.keystore'
   AndroidKeyaliasName: joy leap studio
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

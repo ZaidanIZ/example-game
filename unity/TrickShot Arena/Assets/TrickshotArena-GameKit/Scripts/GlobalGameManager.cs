@@ -86,6 +86,7 @@ namespace TrickshotArena
         public InterstitialAD interstitialScript;
         public RewardedAD rewardedScript;
         public Counter counterScript;
+        public Button rewardedButton;
 
 
         void Awake()
@@ -312,7 +313,7 @@ namespace TrickshotArena
 
             //Cooldown
             int a;
-            a = Random.Range(1, 4);
+            a = Random.Range(1, 3);
             Debug.Log("random yg keluar " + a);
             if (a == 1)
             {
@@ -409,6 +410,7 @@ namespace TrickshotArena
             yield return new WaitForSeconds(0.75f);
 
             gameEndPanel.SetActive(true);
+            rewardedButton.interactable = true;
             gameEndPanel.GetComponent<Animator>().Play("PopIn");
 
 

@@ -6,7 +6,7 @@ using System;
 public class RewardedAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowListener
 {
     [SerializeField] Button _showAdButton;
-    [SerializeField] Button _loadAd;
+    //[SerializeField] Button _loadAd;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
     private Action cbReward;
@@ -28,7 +28,7 @@ public class RewardedAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
         // Disable the button until the ad is ready to show:
         _showAdButton.interactable = false;
         // Add LoadAd() to the button's onClick event:
-        _loadAd.onClick.AddListener(LoadAd);
+        //_loadAd.onClick.AddListener(LoadAd);
 
     }
 
@@ -70,14 +70,16 @@ public class RewardedAD : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     // If the ad successfully loads, add a listener to the button and enable it:
     public void OnUnityAdsAdLoaded(string adUnitId)
     {
-        Debug.Log("Ad Loaded: " + adUnitId);
+        Debug.Log("ad reward Ad Loaded:  " + adUnitId);
 
         if (adUnitId.Equals(_adUnitId))
         {
-            // Configure the button to call the ShowAd() method when clicked:
-            _showAdButton.onClick.AddListener(ShowAd);
+            Debug.Log("ad unit ready");
             // Enable the button for users to click:
             _showAdButton.interactable = true;
+            // Configure the button to call the ShowAd() method when clicked:
+            _showAdButton.onClick.AddListener(ShowAd);
+            
             
         }
     }
