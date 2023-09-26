@@ -53,8 +53,10 @@ public class SelectMenu : MonoBehaviour
 //		((Animation)GameObject.Find("Canvas").GetComponent(typeof(Animation))).Play("Menu-MostrarBotones");
 		this.PaginaActual = PlayerPrefs.GetInt("NivelDesbloqueado") / 10 + 1;
 		this.VolumenSonido = PlayerPrefs.GetFloat("VolumenSonido");
-		((Slider)GameObject.Find("SliderSonido").GetComponent(typeof(Slider))).value = this.VolumenSonido;
-		((Slider)GameObject.Find("SliderMusica").GetComponent(typeof(Slider))).value = PlayerPrefs.GetFloat("VolumenMusica");
+
+		
+		//((Slider)GameObject.Find("SliderSonido").GetComponent(typeof(Slider))).value = this.VolumenSonido;
+		//((Slider)GameObject.Find("SliderMusica").GetComponent(typeof(Slider))).value = PlayerPrefs.GetFloat("VolumenMusica");
 		//PlayerPrefs.SetInt("Idioma", 0);
 
 	}

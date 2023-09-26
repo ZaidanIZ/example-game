@@ -51,7 +51,10 @@ public class ControlMovimiento : MonoBehaviour
 
 	public void Start()
 	{
-		this.NumeroNivel = (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+		if (ADsummoner.adSummoner != null)
+			ADsummoner.adSummoner.LoadInterstitial();
+
+			this.NumeroNivel = (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 		UnityEngine.Debug.Log("Cargado Nivel numero:" + this.NumeroNivel);
 		this.x = (int)Mathf.Round(this.transform.position.x / (float)4);
 		this.y = (int)Mathf.Round(this.transform.position.z / (float)4);
@@ -155,7 +158,15 @@ public class ControlMovimiento : MonoBehaviour
 					{
 						GetComponent<AudioSource>().PlayOneShot(Sonido_BotonClick);
 						Pausar("Continue");
-				;
+			Debug.Log("panggil  ads interstitial");
+			if (ADsummoner.adSummoner != null)
+            {
+				ADsummoner.adSummoner.ShowInterstitial();
+				ADsummoner.adSummoner.LoadInterstitial();
+			}
+				
+
+			;
 					}
 					else if (Opcion == "Empezar")
 					{
@@ -280,6 +291,14 @@ public class ControlMovimiento : MonoBehaviour
 		if (Caso == "Ganar")
 		{
 			UnityEngine.Debug.Log("GANASTE!!!!");
+			Debug.Log("panggil  ads interstitial");
+
+			if (ADsummoner.adSummoner != null)
+			
+				ADsummoner.adSummoner.ShowInterstitial();
+			
+
+
 			this.EstadoJuego = 2;
 			if (PlayerPrefs.GetInt("Idioma") == 1)
 			{
