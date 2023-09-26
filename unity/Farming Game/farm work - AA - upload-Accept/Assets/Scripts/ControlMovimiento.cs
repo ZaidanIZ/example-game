@@ -44,6 +44,8 @@ public class ControlMovimiento : MonoBehaviour
 
 	public AudioClip Sonido_Perder;
 
+	public InterstitialAD interstitialScript;
+
 	public ControlMovimiento()
 	{
 		this.Velocidad = 1.5f;
@@ -155,6 +157,8 @@ public class ControlMovimiento : MonoBehaviour
 					{
 						GetComponent<AudioSource>().PlayOneShot(Sonido_BotonClick);
 						Pausar("Continue");
+			Debug.Log("panggil  ads interstitial");
+			interstitialScript.ShowAd();
 				;
 					}
 					else if (Opcion == "Empezar")
@@ -277,9 +281,12 @@ public class ControlMovimiento : MonoBehaviour
 
 	public void Pausar(string Caso) //kondisi setelah menang/kalah (kurang yakin-_-)
 	{
-		if (Caso == "Ganar")
+		if (Caso == "Ganar")//jika case menang
 		{
 			UnityEngine.Debug.Log("GANASTE!!!!");
+			Debug.Log("panggil inters");
+			interstitialScript.ShowAd();
+
 			this.EstadoJuego = 2;
 			if (PlayerPrefs.GetInt("Idioma") == 1)
 			{
@@ -303,7 +310,7 @@ public class ControlMovimiento : MonoBehaviour
             //Adcontrol.instance.ShowInterstitial();
 
         }
-        else if (Caso == "Perder")
+        else if (Caso == "Perder")//jika case kalah
 		{
 			UnityEngine.Debug.Log("PERDISTE!!!!");
 			this.EstadoJuego = 3;
