@@ -44,6 +44,7 @@ public class ControlMovimiento : MonoBehaviour
 
 	public AudioClip Sonido_Perder;
 
+	
 	public ControlMovimiento()
 	{
 		this.Velocidad = 1.5f;
@@ -52,7 +53,16 @@ public class ControlMovimiento : MonoBehaviour
 	public void Start()
 	{
 		if (ADsummoner.adSummoner != null)
+        {
 			ADsummoner.adSummoner.LoadInterstitial();
+			//ADsummoner.adSummoner.LoadReward();
+		}
+
+
+        if (universal.univers != null)
+        {
+			Instantiate(universal.univers.btnAds);
+        }
 
 			this.NumeroNivel = (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 		UnityEngine.Debug.Log("Cargado Nivel numero:" + this.NumeroNivel);
@@ -294,8 +304,12 @@ public class ControlMovimiento : MonoBehaviour
 			Debug.Log("panggil  ads interstitial");
 
 			if (ADsummoner.adSummoner != null)
-			
+            {
+				ADsummoner.adSummoner.LoadReward();
 				ADsummoner.adSummoner.ShowInterstitial();
+			}
+			
+				
 			
 
 

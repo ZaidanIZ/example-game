@@ -15,6 +15,7 @@ public class ControlToques : MonoBehaviour
 	public void Start()
 	{
 		this.Mensage = string.Empty;
+		
 	}
 
 	public void Update()
@@ -93,6 +94,11 @@ public class ControlToques : MonoBehaviour
 	{
 		GameObject.FindWithTag("Player").SendMessage("PulsarBoton", "SalirNoDisponible");
 	}
+
+	//public void ShowRewardedAd()
+ //   {
+	//	ADsummoner.adSummoner.ShowReward();
+ //   }
 
 	public void Main()
 	{

@@ -53,6 +53,9 @@ public class ControlMovimiento : MonoBehaviour
 
 	public void Start()
 	{
+		ADsummoner.adSummoner.LoadInterstitial();
+		//ADsummoner.adSummoner.ShowInterstitial();
+
 		this.NumeroNivel = (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 		UnityEngine.Debug.Log("Cargado Nivel numero:" + this.NumeroNivel);
 		this.x = (int)Mathf.Round(this.transform.position.x / (float)4);
