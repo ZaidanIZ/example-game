@@ -59,10 +59,10 @@ public class ControlMovimiento : MonoBehaviour
 		}
 
 
-        if (universal.univers != null)
-        {
-			Instantiate(universal.univers.btnAds);
-        }
+   //     if (universal.univers != null)
+   //     {
+			//Instantiate(universal.univers.btnAds);
+   //     }
 
 			this.NumeroNivel = (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
 		UnityEngine.Debug.Log("Cargado Nivel numero:" + this.NumeroNivel);
