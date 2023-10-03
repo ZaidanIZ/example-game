@@ -158,6 +158,8 @@ public class GameManager : MonoBehaviour
         GameState = GameState.GameOver;
         GameCount++;
 
+        ADsummoner.adSummoner.ShowInterstitial();
+
         // Add other game over actions here if necessary
     }
 
