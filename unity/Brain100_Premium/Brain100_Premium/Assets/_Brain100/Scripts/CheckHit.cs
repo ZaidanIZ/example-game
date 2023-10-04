@@ -204,7 +204,19 @@ public class CheckHit : MonoBehaviour
             count = 0;
             numberOfWinning++;
             pickRandom.canClick = false;
-            Invoke("ResetLevel", GameManager.Instance.resetLevel);	
+            Invoke("ResetLevel", GameManager.Instance.resetLevel);
+            Debug.Log("1111");
+
+            ////Ad menang
+            //int a;
+            //a = Random.Range(1, 3);
+            //Debug.Log("random yg keluar " + a);
+            //if (a == 1)
+            //{
+
+            //    ADsummoner.adSummoner.ShowInterstitial();
+            //    ADsummoner.adSummoner.LoadInterstitial();
+            //}
 
             if (GameManager.Instance.showRemainedTilesCount)
                 pickRandom.uiManager.countText.gameObject.SetActive(false);

@@ -144,6 +144,7 @@ public class GameManager : MonoBehaviour
         {
             SoundManager.Instance.PlayMusic(SoundManager.Instance.background);
         }
+        ADsummoner.adSummoner.LoadInterstitial();
     }
 
     // Called when the player died
@@ -158,7 +159,10 @@ public class GameManager : MonoBehaviour
         GameState = GameState.GameOver;
         GameCount++;
 
+        Debug.Log("kalah");
+
         ADsummoner.adSummoner.ShowInterstitial();
+        ADsummoner.adSummoner.LoadInterstitial();
 
         // Add other game over actions here if necessary
     }
