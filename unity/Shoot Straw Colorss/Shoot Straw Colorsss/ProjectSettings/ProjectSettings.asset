@@ -252,9 +252,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Downloads/Joy Leap Studio Key Store Android
-    - jls12345.keystore'
-  AndroidKeyaliasName: joy leap studio
+  AndroidKeystoreName: '{dedicated}: Desktop/newcazgame pass jls12345_ alias jls123456_.keystore'
+  AndroidKeyaliasName: cazual game
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
