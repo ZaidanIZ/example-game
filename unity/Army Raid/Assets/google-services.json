@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "83528402735",
+    "project_id": "redpandas-squadraid",
+    "storage_bucket": "redpandas-squadraid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83528402735:android:76666339858cebb4d883da",
+        "android_client_info": {
+          "package_name": "com.squad.raid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83528402735-4om4088p8pr8bhl4atleitbfsidai7nn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYKrBDimAaKQ3I-_W5ofe7Oqr2SQapIsU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83528402735-4om4088p8pr8bhl4atleitbfsidai7nn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

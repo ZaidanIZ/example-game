@@ -158,7 +158,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.JoyLeapStudio.ColorTapPopPainting3D
+    Android: com.miligames.colortappopshoot
     Standalone: com.dd.ColorPop3d
   buildNumber:
     Standalone: 0
