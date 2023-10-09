@@ -24,7 +24,30 @@ public class UpgradeUI : MonoBehaviour
     UpdateText();
   }
 
-  public void BuyWarrior()
+    public void panggilRewardOpWarrior()
+    {
+        ADsummoner.adSummoner.ShowReward(UpgradeWarriors);
+    }
+
+    public void panggilRewardUpArcher()
+    {
+        ADsummoner.adSummoner.ShowReward(UpgradeArchers);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            UpgradeWarriors();
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            UpgradeArchers();
+        }
+    }
+
+    public void BuyWarrior()
   {
     if (_wallet.GetMoney >= GetPrice(0))
     {

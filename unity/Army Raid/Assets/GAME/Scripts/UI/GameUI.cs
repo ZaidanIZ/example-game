@@ -55,12 +55,14 @@ public class GameUI : MonoBehaviour
 
   public void PlayerWinner()
   {
+        Debug.Log("menang");
     if (!_isStop)
     {
       winnerWrapper.SetActive(true);
       SetEndEvent();
       PlayerPrefs.DeleteKey("_stageLevel");
       _isStop = true;
+            Debug.Log("menang if");
     }
   }
 

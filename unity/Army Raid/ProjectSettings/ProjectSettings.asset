@@ -816,7 +816,12 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 1
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -831,11 +836,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 4cd377b6-4ed7-4fce-85ee-58ea164a2177
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Army Raid
+  organizationId: joy-leap-studio-1
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 

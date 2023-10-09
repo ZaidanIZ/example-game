@@ -124,6 +124,154 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &39536453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39536459}
+  - component: {fileID: 39536458}
+  - component: {fileID: 39536457}
+  - component: {fileID: 39536456}
+  - component: {fileID: 39536455}
+  - component: {fileID: 39536454}
+  m_Layer: 0
+  m_Name: AD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &39536454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39536453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f7991768570e5428f6d88c47c389a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardz: {fileID: 39536457}
+  interstitialz: {fileID: 39536458}
+  bannerz: {fileID: 39536456}
+--- !u!114 &39536455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39536453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ce1fe0e068365b4b832a17a67917a71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidGameId: 5439925
+  _iOSGameId: 5439924
+  _testMode: 1
+  EventAfterInitAds:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 39536458}
+        m_TargetAssemblyTypeName: InterstitialAD, Assembly-CSharp
+        m_MethodName: LoadAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 39536457}
+        m_TargetAssemblyTypeName: RewardedAD, Assembly-CSharp
+        m_MethodName: LoadAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 39536456}
+        m_TargetAssemblyTypeName: BannerAD, Assembly-CSharp
+        m_MethodName: LoadBanner
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &39536456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39536453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b84783d3ba17ee248a403cfad0ecd6a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bannerPosition: 4
+  _androidAdUnitId: Banner_Android
+  _iOSAdUnitId: Banner_iOS
+--- !u!114 &39536457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39536453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d9cf963ba1ecff4981d77e793680322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Rewarded_Android
+  _iOSAdUnitId: Rewarded_iOS
+--- !u!114 &39536458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39536453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b6049d5bee829c44a03b92703821300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _androidAdUnitId: Interstitial_Android
+  _iOsAdUnitId: Interstitial_iOS
+--- !u!4 &39536459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39536453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 447.62918, y: 360.15796, z: -1055.6163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &42642962
 GameObject:
   m_ObjectHideFlags: 0
@@ -4658,22 +4806,22 @@ PrefabInstance:
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 977008057}
+      objectReference: {fileID: 785463822}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AdsGetReward
+      value: panggilRewardUpArcher
       objectReference: {fileID: 0}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MAXReward, Assembly-CSharp
+      value: UpgradeUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
@@ -7885,22 +8033,22 @@ PrefabInstance:
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 977008057}
+      objectReference: {fileID: 785463822}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: AdsGetReward
+      value: panggilRewardOpWarrior
       objectReference: {fileID: 0}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MAXReward, Assembly-CSharp
+      value: UpgradeUI, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5938760291758879571, guid: 3266641057541e846aaf9b84c86bd69a,
         type: 3}
