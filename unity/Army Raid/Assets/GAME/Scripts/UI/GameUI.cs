@@ -44,7 +44,15 @@ public class GameUI : MonoBehaviour
     coinAudioSource.Play();
   }
 
-  public void SetRewards(int win, int lose)
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            PlayerLose();
+        }
+    }
+
+    public void SetRewards(int win, int lose)
   {
     _rewardLose = lose;
     _rewardWin = win;
@@ -55,14 +63,16 @@ public class GameUI : MonoBehaviour
 
   public void PlayerWinner()
   {
-        Debug.Log("menang");
+        
     if (!_isStop)
     {
       winnerWrapper.SetActive(true);
       SetEndEvent();
       PlayerPrefs.DeleteKey("_stageLevel");
       _isStop = true;
-            Debug.Log("menang if");
+
+
+            ADsummoner.adSummoner.ShowInterstitial();
     }
   }
 
@@ -73,7 +83,10 @@ public class GameUI : MonoBehaviour
       loseWrapper.SetActive(true);
       _isStop = true;
       SetEndEvent();
-    }
+
+
+            ADsummoner.adSummoner.ShowInterstitial();
+        }
   }
 
   private void UpdateMoneyText(int value)

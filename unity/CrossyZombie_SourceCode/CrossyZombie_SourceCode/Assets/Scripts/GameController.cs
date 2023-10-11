@@ -519,7 +519,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator ShowUpGameOver()
     {
-		AdsControl.Instance.showAds ();
+		//AdsControl.Instance.showAds ();
         yield return new WaitForSeconds(1.0f);
 
         if (!Saved)

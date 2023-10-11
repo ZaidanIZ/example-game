@@ -164,7 +164,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 0
   AndroidBundleVersionCode: 6
   AndroidMinSdkVersion: 22
-  AndroidTargetSdkVersion: 0
+  AndroidTargetSdkVersion: 34
   AndroidPreferredInstallLocation: 1
   aotOptions: 
   stripEngineCode: 1
@@ -250,8 +250,8 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: '{dedicated}: Desktop/Joy Leap Studio Key Store Android -
-    jls12345.keystore'
+  AndroidKeystoreName: '{dedicated}: Downloads/Joy Leap Studio Key Store Android
+    - jls12345.keystore'
   AndroidKeyaliasName: joy leap studio
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0

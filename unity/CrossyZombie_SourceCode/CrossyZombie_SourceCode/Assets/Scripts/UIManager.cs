@@ -460,8 +460,24 @@ public class UIManager : MonoBehaviour
 
 	public void ShowRewardVideo()
 	{
-		AdsControl.Instance.showAds ();
+        //AdsControl.Instance.showAds ();
+        ADsummoner.adSummoner.ShowReward(afterReward);
+       
+        
 	}
+
+    public void afterReward()
+    {
+        GameController.Instance.ContinueGame();
+        helpMenu.SetActive(false);
+    }
+
+
+
+    public void ShowInterstitial()
+    {
+        ADsummoner.adSummoner.ShowInterstitial();
+    }
 
     // Buy back by diamond
     public void BuyBackBtn_Onclick()
