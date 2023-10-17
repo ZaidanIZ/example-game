@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance { get; private set; }
+    public static UIManager Instance { get; set; }
 
     public GameObject
         inGame,
@@ -117,6 +117,11 @@ public class UIManager : MonoBehaviour
 
         playDelegate = PrepareToPlayGame;
         backDelegate = BackToMenu;
+    }
+
+    public void OpenLink(string urlnya)
+    {
+        Application.OpenURL(urlnya);
     }
 
     private void CheckCharacters()
@@ -473,6 +478,7 @@ public class UIManager : MonoBehaviour
         GameController.Instance.ContinueGame();
         helpMenu.SetActive(false);
         ADsummoner.adSummoner.LoadReward();
+
     }
 
 
@@ -612,6 +618,8 @@ public class UIManager : MonoBehaviour
             SoundManager.Instance.genericBtn.Play();
         }
     }
+
+    
 
     // Tutorial btn in game over is clicked
     public void TutorialBtn2_Onclick()
@@ -894,7 +902,7 @@ public class UIManager : MonoBehaviour
 
         if (type == "C")
         {
-            GameController.Instance.Coin += bonus;
+            GameController.Instance.Coin += bonus ;
             PlayerPrefs.SetFloat(Constants.COIN, GameController.Instance.Coin);
             coinInShopText.text = GameController.Instance.Coin + "";
         }

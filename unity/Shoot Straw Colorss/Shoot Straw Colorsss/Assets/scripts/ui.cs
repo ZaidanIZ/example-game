@@ -12,7 +12,7 @@ public class ui : MonoBehaviour
     }
     public void privacy()
     {
-
+        Application.OpenURL("https://play.google.com/store/apps/dev?id=7686074296399591404");
     }
     public void home()
     {

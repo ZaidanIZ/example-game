@@ -19,11 +19,7 @@ public class ADinitializer : MonoBehaviour, IUnityAdsInitializationListener
         {
             adinitz = this;
         }
-        DontDestroyOnLoad(this);
-        if (adinitz != this)
-        {
-            Destroy(this.gameObject);
-        }
+        
     }
 
     public void InitializeAds()

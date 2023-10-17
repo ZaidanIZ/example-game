@@ -10,6 +10,7 @@ using System;
 
 public class ADsummoner : MonoBehaviour
 {
+    public bool DestroyYn = true;
     public RewardedAD rewardz;
     public InterstitialAD interstitialz;
     public BannerAD bannerz;
@@ -18,18 +19,24 @@ public class ADsummoner : MonoBehaviour
 
     private void Awake()
     {
-        
+       
 
         if (adSummoner == null)
         {
             adSummoner = this;
         }
-        DontDestroyOnLoad(this);
-        if (adSummoner != this)
+        if(DestroyYn == true)
         {
-            Destroy(this.gameObject);
+            DontDestroyOnLoad(this);
+            if (adSummoner != this)
+            {
+                Destroy(this.gameObject);
+            }
         }
+        
     }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +61,10 @@ public class ADsummoner : MonoBehaviour
     public void LoadReward()
     {
         rewardz.LoadAd();
+    }
+    public void LoadReward(Action cb)
+    {
+        rewardz.LoadAd(cb);
     }
 
     public void LoadInterstitial()
