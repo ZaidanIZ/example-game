@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuUI : MonoBehaviour
 {
+    public Button[] tombol;
   [SerializeField] private GameObject menuUIWrapper;
   [SerializeField] private AudioSource startAudioSource;
   [SerializeField] private GameObject TutorialWrapper;
@@ -28,7 +30,14 @@ public class MenuUI : MonoBehaviour
     }
 
     menuUIWrapper.SetActive(status);
-  }
+        Debug.Log("pe");
+        ADsummoner.adSummoner.LoadReward();
+        foreach (Button item in tombol)
+        {
+            item.interactable = true;
+            Debug.Log("nyala");
+        }
+    }
 
   private void Update()
   {

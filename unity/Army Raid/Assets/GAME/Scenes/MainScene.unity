@@ -3875,6 +3875,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae99fee93a81e2439cf377956bf9953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tombol:
+  - {fileID: 104245733}
+  - {fileID: 1393049435}
   menuUIWrapper: {fileID: 1965514007}
   startAudioSource: {fileID: 175093528}
   TutorialWrapper: {fileID: 97389625}
@@ -3890,6 +3893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc38fc2d3f4853d49ba0abf9e539e5f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tombol:
+  - {fileID: 104245733}
+  - {fileID: 1393049435}
   winnerWrapper: {fileID: 179303901}
   loseWrapper: {fileID: 1593913275}
   moneyDisplayText: {fileID: 1586749442}
@@ -3920,6 +3926,9 @@ MonoBehaviour:
   - {fileID: 341443789}
   - {fileID: 1599946117}
   upgradeAudioSource: {fileID: 221419096}
+  Tombol:
+  - {fileID: 104245733}
+  - {fileID: 1393049435}
 --- !u!114 &785463823
 MonoBehaviour:
   m_ObjectHideFlags: 0

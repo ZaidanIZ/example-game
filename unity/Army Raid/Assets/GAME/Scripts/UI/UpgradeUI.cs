@@ -2,12 +2,14 @@ using System;
 using Player.Wallet;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UpgradeUI : MonoBehaviour
 {
   [SerializeField] private TextMeshProUGUI[] upgradePriceDisplayText;
   [SerializeField] private TextMeshProUGUI[] levelDisplayText;
   [SerializeField] private AudioSource upgradeAudioSource;
+    public Button[] Tombol;
   private int[] _playerUpgradesLevel = new int[4];
 
   private Wallet _wallet;
@@ -79,10 +81,15 @@ public class UpgradeUI : MonoBehaviour
 
   public void UpgradeWarriors()
   {
-    //  if (_wallet.GetMoney >= GetPrice(2))
-    //  {
-    //  _wallet.UseMoney(GetPrice(2));
-    _playerUpgradesLevel[2]++;
+        //  if (_wallet.GetMoney >= GetPrice(2))
+        //  {
+        //  _wallet.UseMoney(GetPrice(2));
+        foreach (Button item in Tombol)
+        {
+            item.interactable = false;
+        }
+
+        _playerUpgradesLevel[2]++;
     ComponentsManager.PlayerArmyManager.ResetPlayerWarriors();
 
     SaveDatas();
@@ -92,10 +99,16 @@ public class UpgradeUI : MonoBehaviour
 
   public void UpgradeArchers()
   {
-    // if (_wallet.GetMoney >= GetPrice(3))
-    // {
-    // _wallet.UseMoney(GetPrice(3));
-    _playerUpgradesLevel[3]++;
+        // if (_wallet.GetMoney >= GetPrice(3))
+        // {
+        // _wallet.UseMoney(GetPrice(3));
+        foreach (Button item in Tombol)
+        {
+            item.interactable = false;
+        }
+
+
+        _playerUpgradesLevel[3]++;
     ComponentsManager.PlayerArmyManager.ResetPlayerWarriors();
 
     SaveDatas();

@@ -2,9 +2,11 @@ using Player.Wallet;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
+    public Button[] tombol;
   [SerializeField] private GameObject winnerWrapper, loseWrapper;
 
   [SerializeField]
@@ -71,7 +73,10 @@ public class GameUI : MonoBehaviour
       PlayerPrefs.DeleteKey("_stageLevel");
       _isStop = true;
 
-
+            foreach (Button item in tombol)
+            {
+                item.interactable = true;
+            }
             ADsummoner.adSummoner.ShowInterstitial();
     }
   }
@@ -84,7 +89,10 @@ public class GameUI : MonoBehaviour
       _isStop = true;
       SetEndEvent();
 
-
+            foreach (Button item in tombol)
+            {
+                item.interactable = true;
+            }
             ADsummoner.adSummoner.ShowInterstitial();
         }
   }
