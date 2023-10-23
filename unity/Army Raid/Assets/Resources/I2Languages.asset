@@ -22,7 +22,7 @@ MonoBehaviour:
       Description: 
       Languages:
       - Start Battle
-      - Commencer La Bataille
+      - Start Battle
       Flags: 0000
       Languages_Touch: []
     - Term: VICTORY

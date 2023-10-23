@@ -313,6 +313,7 @@ public class UIManager : MonoBehaviour
     public void Back()
     {
         backDelegate();
+        ADsummoner.adSummoner.LoadReward();
 
 
         ADsummoner.adSummoner.LoadInterstitial();
